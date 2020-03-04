@@ -39,14 +39,14 @@ namespace bank
             }
             else
             {
-                throw new NotImplementedException();
+                throw new NotEnoughFundsException();
             }
             return distination;
         }
 
         public void TransferFunds(Account  destination, float amount)
         {
-            destination.Withraw(amount);
+            destination.Deposit(amount);
             Withraw(amount);
         }
 
